@@ -1,0 +1,544 @@
+@charset "UTF-8";
+
+/*----------------------------------------------------
+ 全ページ共通のスタイル
+ ----------------------------------------------------- */
+body {
+    font-size: 16px;
+    font-family: "Noto Sans JP", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+}
+img, svg {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    opacity: .7;
+    transition: .3s;
+}
+.green-bg {
+    background-color: #d4e3d3;
+}
+.link-btn {
+    width: 160px;
+    line-height: 36px;
+    background-color: #534238;
+    color: #fff;
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+.ml-auto {
+    margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+}
+/* container */
+section {
+    padding: 60px 0;
+}
+.container {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+}
+.s-container {
+    max-width: 700px;
+    width: 90%;
+    margin: 0 auto;
+}
+/* title */
+h1 {
+    width: 260px;
+    position: fixed;
+    top: 38px;
+    left: 4vw;
+    z-index: 1;
+}
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+h3 {
+    font-size: 24px;
+    text-align: left;
+    margin-bottom: 10px;
+}
+h3::before {
+    content: "";
+    border-left: 4px solid #fff;
+    margin-right: 10px;
+}
+@media screen and (max-width: 768px) {
+    h1 {
+        width: 180px;
+        top: 21px;
+    }
+}
+/* header */
+header nav {
+    font-weight: bold;
+    font-size: 22px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 36.1vw;
+    text-align: center;
+    padding: 120px 0 0;
+    background-color: rgba(34, 34, 34, .95);
+    z-index: 2;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform .3s,opacity .3s;
+}
+header nav ul li {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+header nav ul li:first-of-type {
+    width: 60px;
+    margin: 0 auto 40px;
+}
+header nav ul li:last-of-type {
+    margin-bottom: 0;
+}
+header nav ul li a {
+    color: #fff;
+}
+@media screen and (max-width: 768px) {
+    header button {
+        top: 28px;
+    }
+    header nav {
+        width: 67.7vw;
+    }
+}
+/* humburger-buttton */
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+}
+header button {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 38px;
+    right: 4vw;
+    z-index: 3;
+}
+.bar {
+    display: block;
+    background-color: #fff;
+    height: 2px;
+    width: 22px;
+    border-radius: 1px;
+}
+.bar-top {
+    transform: translateY(-4px);
+}
+.bar-bottom {
+    transform: translateY(4px);
+}
+.menu {
+    display: block;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.bar.cross.bar-top {
+    transform: translateY(2px) rotate(30deg);
+    transition: transform .3s;
+}
+.bar.cross.bar-mid {
+    opacity: 0;
+    transition: opacity .3s;
+}
+.bar.cross.bar-bottom {
+    transform: translateY(-2px) rotate(-30deg);
+    transition: transform .3s;
+}
+body.noscroll {
+    overflow: hidden;
+}
+header nav.open {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform .3s,opacity .3s;
+}
+.burger-musk {
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(36, 53, 85, .5);
+    z-index: 1;
+}
+header button.black .bar {
+    background-color: #243555;
+    transition: background-color .3s;
+}
+header button.black .menu {
+    color: #333;
+    transition: color .3s;
+}
+/* fv */
+.fv {
+    height: 100vh;
+}
+.fv::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #534238;
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+}
+.kv-wrapper {
+    height: 85%;
+    width: 75%;
+    background-size: cover;
+    background-position: center 0;
+    position: relative;
+}
+.copy-wrapper {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    color: #fff;
+}
+.copy-wrapper p:first-child {
+    margin-bottom: 4px;
+    font-size: 22px;
+}
+.copy-wrapper p:nth-child(2) {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.copy-wrapper p:last-of-type {
+    font-size: 64px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+@media screen and (max-width: 1100px) {
+    .copy-wrapper {
+        right: -25%;
+        transform: translate(0, -50%);
+    }
+    .copy-wrapper p:first-child {
+        font-size: 22px;
+    }
+    .copy-wrapper p:nth-child(2) {
+        font-size: 22px;
+    }
+    .copy-wrapper p:last-of-type {
+        font-size: 54px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .fv {
+        height: 60vh;
+    }
+    .fv::after {
+        height: 65%;
+    }
+    .kv-wrapper {
+        height: 100%;
+    }
+    .copy-wrapper p:first-child {
+        font-size: calc(22 / 500 * 100vw);
+    }
+    .copy-wrapper p:nth-child(2) {
+        font-size: calc(22 / 500 * 100vw);
+    }
+    .copy-wrapper p:last-of-type {
+        font-size: calc(54 / 500 * 100vw);
+    }
+}
+/* footer */
+.footer {
+    line-height: 50px;
+    background-color: #534238;
+    text-align: center;
+    color: #fff;
+}
+
+/*------------------------------------------------
+ トップページ（index）はここから
+-------------------------------------------------- */
+/* fv */
+.top-fv {
+    background-image: url(./img/top-fv.jpg);
+}
+/* about */
+section.about {
+    position: relative;
+}
+section.about::after {
+    content: "";
+    width: 100vw;
+    height: 160px;
+    display: block;
+    background-color: #d4e3d3;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+.about-bg {
+    background-image: url(./img/top-about.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 110px 0 110px 50px;
+}
+.about-content {
+    width: min(100% - 2rem, 590px);
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, .95);
+    padding: 50px 30px;
+}
+.about-content p {
+    line-height: 2;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 720px) {
+    .about-bg {
+        padding: 50px 4vw;
+    }
+}
+/* menu */
+.top-menu p {
+    margin-bottom: 20px;
+}
+.menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+.menu-content .menu-item a img {
+    max-width: 350px;
+    height: 230px;
+    object-fit: cover;
+}
+@media screen and (max-width: 900px) {
+    .menu-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .menu-content .menu-item a img {
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .menu-content {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .menu-content .menu-item a img {
+        max-width: 100%;
+        height: 230px;
+    }
+}
+/* news */
+.news ul {
+    max-width: 700px;
+}
+.news ul li {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 30px;
+}
+.news ul li time {
+    color: #cecece;
+    font-weight: bold;
+    font-size: 13px;
+}
+.news ul li h3 {
+    color: #333;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-indent: -14px;
+}
+/* contact */
+.inner-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contact-content {
+    width: 40%;
+}
+.contact-content p {
+    line-height: 2;
+    margin-bottom: 30px;
+}
+.contact-img-wrapper {
+    width: 52.7%;
+}
+@media screen and (max-width: 768px) {
+    .inner-contact {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 0 4vw;
+    }
+    .contact-content {
+        width: 440px;
+        max-width: 100%;
+    }
+    .contact-img-wrapper {
+        width: 520px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .section-wrappper:last-of-type {
+        margin-bottom: 80px;
+    }
+}
+
+/*--------------------------------------------------------
+ About Cafeページはここから
+---------------------------------------------------------- */
+.fv-about {
+    background-image: url(./img/about-fv.jpg);
+}
+.about-text {
+    margin-bottom: 30px;
+}
+
+/*-------------------------------------------------------
+ メニューページはここから
+--------------------------------------------------------- */
+/* fv */
+.menu-fv {
+    background-image: url(./img/top-menu09.jpeg);
+}
+/* menu */
+.menu-wrapper {
+    background-image: url(./img/menu-bg.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    margin-top: 50px;
+}
+.inner-menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px 40px;
+}
+.menu-contents ul li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    padding: 16px 0;
+}
+@media screen and (max-width: 720px) {
+    .inner-menu {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/*------------------------------------------------------
+ エラーページはここから
+-------------------------------------------------------- */
+/* error */
+.error-fv {
+    background-image: url(./img/error-fv.jpg);
+}
+.error {
+    padding-bottom: 120px;
+    text-align: center;
+}
+.error p {
+    margin-bottom: 48px;
+}
+.error .btn a {
+    margin: 0 auto;
+}
+
+/*-------------------------------------------------------
+コンタクトページはここから
+--------------------------------------------------------- */
+/* contact */
+.contact-fv {
+    background-image: url(./img/contact-fv.jpg);
+}
+.contact p:first-child {
+    margin-bottom: 50px;
+}
+.contact form ul li.inquiry ul {
+    display: flex;
+    align-items: center;
+}
+.contact form ul li.inquiry ul li {
+    margin-right: 50px;
+    margin-bottom: 0;
+}
+.contact .inquiry ul li input {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    vertical-align: -4px;
+}
+.contact form ul li {
+    margin-bottom: 40px;
+}
+.contact form .form-title {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.contact form input,
+.contact form textarea {
+    border: 1px solid #333;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+}
+.submit-btn input[type=submit] {
+    color: #fff;
+    background-color: #534238;
+    width: 160px;
+    height: 36px;
+    font-size: 12px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin: 40px auto 0;
+    cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+    .contact p:first-child {
+        margin-bottom:25px;
+    }
+    .contact form ul li.inquiry ul {
+        display: block;
+    }
+    .contact form ul li.inquiry ul li {
+        margin-bottom: 10px;
+    }
+    .contact form ul li {
+        margin-bottom: 20px;
+    }
+}
