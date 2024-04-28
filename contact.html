@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitotoki Cafe | Contact</title>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- header -->
+    <header>
+        <h1>
+            <a href="./index.html">
+                <img src="./img/header-logo.svg" alt="Hitotoki Cafe">
+            </a>
+        </h1>
+        <nav>
+            <ul>
+                <li><a href="./index.html"><img src="./img/logo.svg" alt="コーヒー豆のロゴ"></a></li>
+                <li><a href="./about.html">About cafe</a></li>
+                <li><a href="./menu.html">menu</a></li>
+                <li><a href="./error.html">news</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="burger-btn">
+            <div>
+                <span class="bar bar-top"></span>
+                <span class="bar bar-mid"></span>
+                <span class="bar bar-bottom"></span>
+            </div>
+            <span class="menu">menu</span>
+        </button>
+        <span class="burger-musk"></span>
+    </header>
+
+    <!-- main -->
+    <main>
+        <!-- fv -->
+        <div class="fv">
+            <div class="kv-wrapper contact-fv">
+                <div class="copy-wrapper">
+                    <p>お問い合わせ</p>
+                    <p>Contact</p>
+                </div>
+            </div>
+        </div>
+    
+        <!-- contact -->
+        <section class="contact">
+            <div class="s-container">
+                <p>ひと息つく時間をご予約したい、お誕生日のサプライズをしたい、貸切で利用したい等のご相談はこちらからお問い合わせいただけます。<br>こちらからお問い合わせくださいませ。</p>
+                <form>
+                    <ul>
+                        <li class="inquiry">
+                            <div class="form-title">お問い合わせ種別</div>
+                            <ul>
+                                <li>
+                                    <input type="radio" class="radio-btn" name="inquiry-type" id="reserve" checked>
+                                    <label for="reserve">ご予約</label>
+                                </li>
+                                <li>
+                                    <input type="radio" class="radio-btn" name="inquiry-type" id="kashikiri">
+                                    <label for="kashikiri">貸切予約</label>
+                                </li>
+                                <li>
+                                    <input type="radio" class="radio-btn" name="inquiry-type" id="arubaito">
+                                    <label for="arubaito">アルバイトのご応募</label>
+                                </li>
+                                <li>
+                                    <input type="radio" class="radio-btn" name="inquiry-type" id="others">
+                                    <label for="others">その他</label>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <div class="form-title">
+                                <label for="name">お名前</label>
+                            </div>
+                            <input type="text" id="name">
+                        </li>
+                        <li>
+                            <div class="form-title">
+                                <label for="phone-number">電話番号</label>
+                            </div>
+                            <input type="text" id="phone-number">
+                        </li>
+                        <li>
+                            <div class="form-title">
+                                <label for="email">メールアドレス</label>
+                            </div>
+                            <input type="text" id="email">
+                        </li>
+                        <li>
+                            <div class="form-title">
+                                <label for="detail">お問い合わせ内容</label>
+                            </div>
+                            <textarea name="" id="detail" cols="30" rows="10"></textarea>
+                        </li>
+                    </ul>
+                    <!-- 送信ボタン -->
+                    <div class="submit-btn">
+                        <input type="submit" value="送信">
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+     <!-- footer -->
+     <footer class="footer">
+        <small>&copy;2024 Hitotoki Cafe</small>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
